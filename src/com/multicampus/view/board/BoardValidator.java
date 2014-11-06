@@ -17,11 +17,11 @@ public class BoardValidator implements Validator {
 		BoardVO board = (BoardVO) target;
 		
 		if(board.getTitle().length() == 0 || board.getTitle() == null) {
-			errors.rejectValue("board", "error.board.title");
+			errors.rejectValue("title", "error.board.title");
 		}
 		
 		if(board.getWriter().length() == 0 || board.getWriter() == null) {
-			errors.rejectValue("board", "error.board.writer");
+			errors.rejectValue("writer", "error.board.writer");
 		}
 		
 		if(board.getContent().length() < 10) {
