@@ -13,18 +13,18 @@
 		<table border="1" cellpadding="0" cellspacing="0">
 			<tr>
 				<td>제목</td><td align="left">
-				<input type="text" name="title"/></td>
-				<font color="red"><form:errors path="boardVO.title"/></font>
+				<input type="text" name="title"/>
+				<font color="red"><form:errors path="boardVO.title"/></font></td>
 			</tr>
 			<tr>
 				<td>작성자</td><td align="left">
-				<input type="text" name="writer" size="10"/></td>
-				<font color="red"><form:errors path="boardVO.writer"/></font>
+				<input type="text" name="writer" size="10"/>
+				<font color="red"><form:errors path="boardVO.writer"/></font></td>
 			</tr>
 			<tr>
 				<td>내용</td><td align="left">
-				<textarea name="content" cols="40" rows="10"></textarea></td>
-				<font color="red"><form:errors path="boardVO.content"/></font>
+				<textarea name="content" cols="40" rows="10"></textarea>
+				<font color="red"><form:errors path="boardVO.content"/></font></td>
 			</tr>
 			<tr>
 				<td>업로드</td><td align="left">

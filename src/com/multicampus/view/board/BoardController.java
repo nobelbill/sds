@@ -25,7 +25,8 @@ public class BoardController {
 		// 파일 업로드 구현 
 		
 		new BoardValidator().validate(vo, errors);
-		if(errors.hasErrors()) return "insertBoard.jsp";
+		if(errors.hasErrors()) 
+			return "insertBoard.jsp";
 		
 		MultipartFile uploadFile = vo.getUploadFile();
 		if (uploadFile.getOriginalFilename().length() > 0) {
