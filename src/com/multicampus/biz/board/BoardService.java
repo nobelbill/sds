@@ -3,6 +3,7 @@ package com.multicampus.biz.board;
 import java.util.List;
 
 public interface BoardService {
+	
 	// ±Û µî·Ï
 	public void insertBoard(BoardVO vo);
 

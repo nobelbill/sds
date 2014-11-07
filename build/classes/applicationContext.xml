@@ -28,7 +28,7 @@
 	</bean>
 	
 	<!-- Spring ibatis 연동 설정 -->
-	<bean id="sqlMapClient" class="com.ibatis.sqlmap.client.SqlMapClient">
+	<bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
 		<property name="dataSource" ref="dataSource"/>
 		<property name="configLocation" value="classpath:sql-map-config.xml"/>
 	</bean>

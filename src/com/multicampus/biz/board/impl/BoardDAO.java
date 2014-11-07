@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.orm.ibatis.SqlMapClientFactoryBean;
 import org.springframework.stereotype.Repository;
 
 import com.multicampus.biz.board.BoardVO;
@@ -13,8 +14,8 @@ import com.multicampus.biz.common.JDBCUtil;
 
 // DAO(Data Access Object)
 @Repository
-public class BoardDAO {
-	// DB 관련 변수
+public class BoardDAO {	// DB 관련 변수
+	
 	private Connection conn = null;
 	private PreparedStatement stmt = null;
 	private ResultSet rs = null;
