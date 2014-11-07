@@ -25,6 +25,7 @@ public class LoginController {
 	
 	@RequestMapping(value="/login.do", method=RequestMethod.POST)
 	public String login(UserVO vo, HttpSession session) {	
+		
 		UserVO user = userService.getUser(vo);
 		if(user != null) {
 			session.setAttribute("userId", user.getId());
