@@ -2,8 +2,9 @@ package com.multicampus.biz.board;
 
 import java.util.List;
 
+import org.hibernate.SessionFactory;
+
 public interface BoardService {
-	
 	// ±Û µî·Ï
 	public void insertBoard(BoardVO vo);
 

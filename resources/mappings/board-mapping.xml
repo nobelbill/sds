@@ -32,7 +32,7 @@
 		where seq=#seq#
 	</delete>
 	
-	<select id="getBoard" resultClass="board">
+	<select id="getBoard" resultMap="boardResult">
 		<![CDATA[
 		SELECT *
 		FROM BOARD
@@ -43,7 +43,12 @@
 	<select id="getBoardList" resultMap="boardResult">
 		select * 
 		from board  
-		where title like '%'||#searchKeyword#||'%' 
+		<isEqual  prepend="AND" property="searchCondition" compareValue="TITLE">
+			where title like '%'||#searchKeyword#||'%' 
+		</isEqual>
+		<isEqual  prepend="AND" property="searchCondition" compareValue="CONTENT">
+			where content like '%'||#searchKeyword#||'%' 
+		</isEqual>
 		order by seq desc
 	</select>
 </sqlMap>
